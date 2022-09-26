@@ -12,3 +12,14 @@ const quotes = [
   'There is little success where there is little laughter.',
   'We cannot solve our problems with the same thinking we used when we created them.'
 ];
+
+
+const printQuotes = document.querySelector('.quotes');
+const button = document.querySelector('button');
+
+
+button.addEventListener('click', () => {
+  let quoteNumber = Math.floor(Math.random() * quotes.length);
+  printQuotes.textContent = quotes[quoteNumber];
+});
+
